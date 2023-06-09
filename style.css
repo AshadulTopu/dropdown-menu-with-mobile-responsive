@@ -1,0 +1,149 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	background: rgba(0, 0, 0, 1.0);
+	min-height: 200vh;
+	max-width: 100%;
+}
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 40px;
+	transition: all 0.6s ease-in;
+/*	background: #fff;*/
+}
+.sticky{
+	padding: 10px 40px;
+	background: rgba(225, 255, 255, 0.6);
+}
+.sticky .navbar ul li a{
+	color: #000;
+}
+.logo a{
+	font-size: 42px;
+	font-weight: 900;
+	text-decoration: none;
+	color: #FFF;
+}
+.navbar ul{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.navbar ul li{
+	position: relative;
+	margin: 0 3%;
+	list-style: none;
+}
+.navbar ul li a{
+	text-decoration: none;
+	font-size: 22px;
+	font-weight: 500;
+	color: #FFF;
+	padding: 10px;
+}
+.navbar ul li a:hover{
+	background: #333;
+	color: #000;
+}
+.navbar ul li ul{
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-top: 30px;
+	width: 200px;
+	background: #333;
+	display: none;
+}
+.navbar ul li:focus-within > ul,
+.navbar ul li:hover > ul{
+	display: initial;
+}
+.navbar ul li ul li{
+	width: 100%;
+	padding: 10px;
+
+}
+.navbar ul li ul li ul{
+	position: relative;
+	left: 20px;
+	top: 0;
+}
+.navbar ul li ul li ul li{
+	width: 100%;
+	padding: 10px;
+	background: #333;
+}
+.show-menu{
+	color: #FFF;
+	font-size: 22px;
+	text-transform: capitalize;
+	display: none;
+}
+.close-menu{
+	color: #FFF;
+	font-size: 22px;
+	text-transform: capitalize;
+	display: none;
+	position: relative;
+	top: 20px;
+	right: -95%;
+	padding-right: 20px;
+}
+.my-btn a{
+	font-size: 20px;
+	color: #fff;
+	text-decoration: none;
+	text-transform: capitalize;
+	padding: 8px 20px;
+	border: 1px solid #fff;
+	border-radius: 50px;
+}
+.my-btn a:hover{
+	color: #333;
+	background: #fff;
+}
+.banner{
+	width: 100%;
+}
+.banner img{
+	width: 100%;
+}  
+
+@media (max-width: 991px){
+	.navbar{
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		background: #333;
+		display: none;
+	}
+	.navbar ul{
+		display: block;
+
+		}
+	.navbar ul li{
+		margin: 10px auto;
+	}
+	.navbar ul li ul{
+	position: relative;
+	left: 20px;
+	top: 0;
+	}
+	.navbar ul li ul li{
+		margin: 5px auto;
+	}
+	.show-menu,	
+	.close-menu{
+		display: block;
+	}
+}
